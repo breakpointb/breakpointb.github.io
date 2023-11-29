@@ -13,7 +13,7 @@
 
 
 
-<title>happy | 极简之美</title>
+<title>个人简历 | 极简之美</title>
 
 
 
@@ -221,11 +221,73 @@
                 <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">happy</h1>
+            <h1 class="post-title">个人简历</h1>
             
                 <div class="post-meta">
                     
@@ -234,7 +296,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">November 27, 2023&nbsp;&nbsp;14:55:41</a>
+                        Date: <a href="#">November 29, 2023&nbsp;&nbsp;11:01:46</a>
                         </span>
                     
                     
@@ -243,35 +305,53 @@
         </header>
 
         <div class="post-content">
-            <ol>
-<li><p>华为重磅官宣：车 BU 独立运营，长安入股不超过 40%</p>
+            <h2 id="雷布斯"><a href="#雷布斯" class="headerlink" title="雷布斯"></a>雷布斯</h2><p><code>256937***@qq.com</code>  |  <code>wx: s_Per****15  |  </code>1576*****09<code>|</code>公众号: 在建&#96;</p>
+<p><code>武**学 19*7-19*1</code> | 计算机科学与技术  | <code>Golang</code> | <code>Java</code> | <code>计算机, 软件编程爱好者</code></p>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul>
+<li><strong>Golang</strong>: 熟悉 Golang 以及常见标准库的使用, 了解 GMP , GC 三色标记算法以及 Golang 的性能分析优化</li>
+<li><strong>Java</strong>: 了解 Java 以及常见标准库, Spring全家桶的使用</li>
+<li><strong>Web</strong>: 了解 MYSQL 事务, 锁, 并发, 索引, InnoDB引擎, 性能测试, 性能优化; 了解 Redis 几种基本数据结构和使用;</li>
+<li><strong>Linux</strong>:  一般以 Linux 云服务器作为开发工具, 熟悉常见的 Linux 命令, shell 脚本, docker 等工具 </li>
+<li><strong>计算机基础</strong>: 了解常见的操作系统, 计网, 数据结构和算法</li>
+<li><strong>测试</strong>: 编写测试用例和测试程序, 定位服务的 bug , 提交服务功能和性能的测试报告</li>
+</ul>
+<h2 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h2><ul>
+<li><p><strong>关二爷科技后端负责(2021-9 至 2021-12):</strong> </p>
+<p><code>项目负责</code> <code>全栈开发</code>: 负责各个阶段主要的评审, 后台服务的设计和开发, 以及代码 review; 接入 CLB 的负载均衡;  CLS 日志收集, 可视化,告警通知; Prometheus Metric 指标监控; 云原生 ETCD RPC服务的注册中心; Pulsar 消息队列进行削峰; k8s 滚动发布部署保证服务持续的高可用; 实现 LRU + 令牌桶算法限流接口, 防止服务盗刷, 同时减少资源的占用</p>
 </li>
-<li><p>字节游戏地震：传在研项目尽数被砍，恐超千人将被裁</p>
+<li><p>**元象唯思YX游戏引擎后台研发(2021-5 至 2021-9): **12月31日到1月1日 TME跨年会上, 该引擎提供来自QQ音乐, 酷狗, 酷我, 全民k歌等平台共 110w UV, 高峰期近 10w 用户同时在线3D同屏互动服务</p>
+<p><code>统一日志</code>: 日志模块封装; 统一收集, 展示, Metric 可视化</p>
+<p><code>索引优化</code>: 测试 reids LRU 和 TcaplusDB 的功能和性能指标, 提交测试报告; 编写 Redis 和 TcapluDB 多级缓存通用库, 保证引擎的烘焙素材获取时间不超过 10ms </p>
+<p><code>gokv</code>: 基于零拷贝和一致性hash 实现的 KV 数据库, 解决 redis big key 问题</p>
+<p><code>技术分享</code>:  “云原生监控 Prometheus Metric 应用到 YX游戏引擎在线平台” 的技术分享, 旨在解决公司目前基于 cls 日志监控的性能和成本问题, 目前公司所有 Metric 监控均由 CLS 迁移到云原生监控 Prometheus</p>
+<p><code>用户模块和房间模块缓存层设计开发</code>:  grpc, redis缓存</p>
 </li>
-<li><p>阿里达摩院回应撤裁量子实验室：已将实验室及仪器设备赠予浙江大学</p>
+<li><p><strong>HelloGitHub-团队成员(2020-10 至 2021-2):</strong> 进入该团队的时候, 团队成员不到 10 人, 目前单个 HelloGithub 仓库 star 已达到 50K+ </p>
+<p>PR 并维护 HelloGithub 仓库; review 其他成员的 PR</p>
 </li>
-<li><p>“AI大牛”李沐的大模型公司细节曝光，项目 GitHub 空仓标星超500</p>
+</ul>
+<h2 id="校园经历"><a href="#校园经历" class="headerlink" title="校园经历"></a>校园经历</h2><ul>
+<li><p><strong>极客勤奋蜂工作室后端组开发负责人(2020-11 至 2021-2):</strong></p>
+<p><code>技术负责</code> <code>后端</code>: 完成刷题网站的项目的需求分析, 数据库设计, 接口设计, 项目搭建, 以代码模块化形式带领团队分工开发, 并解决其他成员遇到的问题, 代码 review, 该项目主要使用 MySQL, Redis</p>
 </li>
-<li><p>马云前助理：马家厨房不做预制菜</p>
+<li><p><strong>NMID 重邮移动互联网应用研究中心后端开发(2020-4 至 2021-4):</strong></p>
+<p><code>后端</code>: 独立完成语析笔记小程序后端接口设计, 数据库设计和接口实现, 使用 nginx + docker + shell 脚本部署服务</p>
 </li>
-<li><p>淘宝取消双12购物节，活动早已偏离初心</p>
+</ul>
+<h2 id="个人链接"><a href="#个人链接" class="headerlink" title="个人链接"></a>个人链接</h2><ul>
+<li><p><strong>个人网站</strong>: <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
 </li>
-<li><p>暴雪国服简体中文官网可正常登录，并下载客户端</p>
+<li><p><strong>博客</strong>: <a target="_blank" rel="noopener" href="https://breakpointb.github.io/">极简之美 </a></p>
 </li>
-<li><p>微信：下架部分违规微短剧剧目，并对相关违规小程序进行处置</p>
+<li><p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></p>
 </li>
-<li><p>谷歌反垄断案揭秘的真相：“不作恶”已被摒弃 在搜索市场可为所欲为</p>
+<li><p><strong>知乎</strong>: <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/bmft.tech/posts">https://www.zhihu.com/people/bmft.tech/posts</a></p>
 </li>
-<li><p>马斯克证实特斯拉提供 FSD V12 自动驾驶</p>
+<li><p><strong>公众号</strong>:在建</p>
 </li>
-<li><p>HuggingFace 宣布最受欢迎的 AI 机构</p>
-</li>
-<li><p>PHP 8.3 发布</p>
-</li>
-<li><p>Notepad++ 发布二十周年</p>
-</li>
-</ol>
-<p>————————————————<br>版权声明：本文为CSDN博主「极客日报」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/csdngeeknews/article/details/134638616">https://blog.csdn.net/csdngeeknews/article/details/134638616</a></p>
+</ul>
+<hr>
+<p>*<center>@2022-1 Made by **</center>*<br>*<center>简历下载  </center></p>
 
         </div>
 
@@ -286,7 +366,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2023/11/27/happy/">http://example.com/2023/11/27/happy/</a></span>
+                        <span><a href="http://example.com/2023/11/29/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">http://example.com/2023/11/29/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/</a></span>
                     </p>
                 
                 
@@ -310,7 +390,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/haha/"># haha</a>
+                        <a href="/tags/jianli/"># jianli</a>
                     
                         
                 </span>
@@ -323,10 +403,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2023/11/29/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">个人简历</a>
             
-            
-            <a class="next" rel="next" href="/2023/11/26/hello-world/">Hello World</a>
+            <a class="next" rel="next" href="/2023/11/27/happy/">happy</a>
             
         </section>
 
